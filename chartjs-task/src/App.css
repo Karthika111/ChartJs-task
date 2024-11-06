@@ -1,0 +1,75 @@
+/* src/App.css */
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.app.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.app.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #36a2eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds space between the charts */
+  justify-content: space-between; /* Ensures even spacing on larger screens */
+}
+
+.chart-item {
+  flex: 1 1 calc(33.33% - 20px); /* Makes each chart take up a third of the container, minus the gap */
+  box-sizing: border-box; /* Ensures the width calculation accounts for padding and margin */
+  min-width: 300px; /* Minimum width for each chart */
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 8px;
+}
+
+.chart-item h2 {
+  text-align: center;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column; /* Stack charts vertically on smaller screens */
+  }
+
+  .chart-item {
+    flex: 1 1 100%; /* Each chart takes full width on smaller screens */
+    min-width: 100%;
+  }
+}
